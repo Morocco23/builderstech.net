@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Builder's Tech.</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000000;
+      color: #dbdbdb;
+      overflow: hidden;
+    }
+
+
+    .opening-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+      transition: opacity 1s ease;
+    }
+
+    .intro-wrapper {
+      display: flex;
+      align-items: center;
+      position: absolute;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      animation: zoomIn 1.5s ease forwards;
+      z-index: 1;
+    }
+
+    .slogan {
+      margin-left: 40px;
+      text-align: left;
+      color: rgb(56, 56, 56);
+      z-index: 1;
+    }
+
+    .text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      opacity: 0;
+      transform: translateX(-40px);
+      background: linear-gradient(270deg, rgb(59, 59, 59), #ff8800, #ffffff, rgb(87, 87, 87));
+      background-size: 600% 600%;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .delay0 {
+      font-weight: bold;
+       animation: textShow 1s forwards 1s; }
+    .delay1 { animation: textShow 1s forwards 2s; }
+    .delay2 { animation: textShow 1s forwards 2.4s; }
+    .delay3 { animation: textShow 1s forwards 2.8s; }
+
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.2) translateX(100px);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1) translateX(100px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateX(25px);
+      }
+    }
+
+    @keyframes textShow {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .opening-container {
+        padding: 10px;
+      }
+      .logo {
+        width: 90px;
+        height: 90px;
+      }
+      .text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="opening-container" id="container">
+    <div class="intro-wrapper" id="intro">
+      <img src="./images/white.png" alt="Builder's Tech Logo" class="logo" id="logo" />
+      <div class="slogan" id="slogan">
+        <div class="text delay0">BUILDER'S TECH<span style="font-size: 30px; color: #ff8800;">.</span></div>
+        <div style="font-size: 0.9rem;">
+          <span class="text delay1">"smart, </span><span class="text delay2">sustainable, </span><span class="text delay3">and efficient solutions"</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fade out and navigate
+    setTimeout(() => {
+      document.getElementById("container").style.opacity = "0";
+      setTimeout(() => {
+        window.location.href = "Home.html";
+      }, 1000);
+    }, 4500);
+  </script>
+</body>
+</html>
