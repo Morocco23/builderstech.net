@@ -126,7 +126,7 @@ body.show {
       .opening-container {
         padding: 10px;
       }
-      .logo {
+      .opening-container .logo {
         width: 90px;
         height: 90px;
       }
