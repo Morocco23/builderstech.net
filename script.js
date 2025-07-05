@@ -61,3 +61,4 @@ window.addEventListener('resize', triggerMenuClickIfWide);
 window.addEventListener("hashchange", function() {
   history.replaceState(null, null, ' ');
 }, false);
+
