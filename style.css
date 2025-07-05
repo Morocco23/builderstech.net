@@ -51,10 +51,7 @@ body.show {
 .hero-content{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  height: 80%;
   padding: 20px;
 }
 .hero h1 {
@@ -63,7 +60,6 @@ body.show {
 
 .hero p {
   font-size: 18px;
-  margin: 0 auto;
 }
 
 .hero .t{
@@ -79,6 +75,7 @@ body.show {
       rgba(5, 5, 5, 0) 100%
     ) 8;
     transition: all 1s ease-in-out;
+    margin: 0 auto;
 }
 
 @keyframes mv{
@@ -437,20 +434,25 @@ form button {
 }
 
 /* Responsive */
+@media screen and (max-width: 704px) {
+  .containercc2 {
+    flex: 0 0 100%;
+    height: 320px;
+    background: rgba(70, 131, 180, 0);
+    color: white;
+  }
+}
 @media screen and (max-width: 780px) {
-
+  .icon-container {
+    gap: 30px;
+  }
   .containercc {
     flex: 0 0 320px;
     height: 320px;
     background: rgba(70, 131, 180, 0);
     color: white;
 }
-.containercc2 {
-    flex: 0 0 100%;
-    height: 320px;
-    background: rgba(70, 131, 180, 0);
-    color: white;
-}
+
   .hero h1 {
     font-size: 40px;
   }
@@ -588,6 +590,7 @@ form button {
 @media screen and (max-height: 500px) {
   .nav div[class] {
     font-size: 18px;
+    margin-top: 2px;
     background: linear-gradient(90deg, transparent 50%, currentColor 0) 75% 100% / var(--d, 0%) 2px no-repeat,
                 linear-gradient(-90deg, transparent 50%, currentColor 0) 25% 100% / var(--d, 0%) 2px no-repeat;
   }
@@ -606,6 +609,7 @@ form button {
       rgba(75, 75, 75, 0) 50%,
       rgba(5, 5, 5, 0) 100%
     ) 5; 
+  margin: 0 auto;
   }
   .background-slider {
     height: 100vh;
@@ -616,7 +620,7 @@ form button {
     background: rgba(70, 131, 180, 0);
     color: white;
 }
-.hero-content{
-  height: 50%;
+.hero h1 {
+  margin: 0 auto;
 }
 }
