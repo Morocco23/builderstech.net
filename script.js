@@ -4,11 +4,23 @@ window.addEventListener("DOMContentLoaded", () => {
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
+
+  const splash = document.getElementById("splash");
+  const main   = document.getElementById("main");
+
+  // Wait 4 seconds, then fade out splash
+  setTimeout(() => {
+    splash.classList.add("hidden");
+
+    // After fade (0.5s), remove splash and show main
+    splash.addEventListener("transitionend", () => {
+      splash.remove();
+      main.style.display = "block";
+    });
+  }, 4000);
 });
 
 var menuClick = false;
-document.body.style.transition = "opacity 1.5s ease";
-document.body.style.opacity = "1";
 
 function toggleMenu(icon) {
     icon.classList.toggle("active");
